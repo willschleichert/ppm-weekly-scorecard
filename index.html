@@ -645,7 +645,7 @@ html, body { background: var(--bg); color: var(--ink); font-family: 'Archivo', s
 <body>
 
 <!-- ================== FORM ================== -->
-<div class="form-wrap" id="formView">
+<div class="form-wrap" id="formView" style="display:none;">
   <div class="form-header">
     <div class="kicker">FanDuel · Popular Parlay Module</div>
     <h1>Weekly <span class="accent">Scorecard</span><br>Builder</h1>
@@ -867,7 +867,7 @@ Cubs Moneyline</textarea></div>
 </div>
 
 <!-- ================== SCORECARD (FD App Style) ================== -->
-<div id="scorecardView" style="display:none;">
+<div id="scorecardView" style="display:block;">
 
   <div class="fd-shell">
 
@@ -1041,7 +1041,7 @@ Cubs Moneyline</textarea></div>
 
   </div><!-- /fd-shell -->
 
-  <!-- ── EDIT DATA BAR (hidden in read-only version) ── -->
+  <!-- ── EDIT DATA BAR (hidden in output-only version) ── -->
   <div class="back-bar" style="display:none;">
     <button class="back-btn" onclick="backToForm()">← Edit Data</button>
     <span id="out_weekLabel" style="font-family:'Archivo',sans-serif;font-size:13px;color:rgba(255,255,255,0.6);letter-spacing:0.05em;"></span>
@@ -2177,6 +2177,8 @@ updatePayoutSum();
 initWeekDates();
 buildTeamHistoryForm();
 buildSportStatsList();
+// Auto-generate scorecard on load (output-only version)
+document.addEventListener("DOMContentLoaded", function() { generateScorecard(); });
 updateUndoBtn();
 
 // Auto-snapshot every 60 seconds while editing
