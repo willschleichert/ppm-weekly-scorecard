@@ -643,15 +643,11 @@ html, body { background: var(--bg); color: var(--ink); font-family: 'Archivo', s
 </style>
 </head>
 <body>
-<script>
-  (function() {
-    const correct = "modsquad";
-    const entered = prompt("🔒 Enter password to access the PPM Scorecard:");
-    if (entered !== correct) {
-      document.body.innerHTML = "<div style='display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0e1a;color:#f4f6fb;font-family:Arial,sans-serif;font-size:20px;'>Access denied.</div>";
-    }
-  })();
-</script>
+<div id="denied-screen" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#0a0e1a;color:#f4f6fb;font-family:Arial,sans-serif;font-size:20px;align-items:center;justify-content:center;z-index:99999;">
+  Access denied.
+</div>
+<div id="main-content" style="display:none;">
+
 
 <!-- ================== FORM ================== -->
 <div class="form-wrap" id="formView" style="display:none;">
@@ -2204,6 +2200,20 @@ setInterval(() => {
     }
   }
 }, 60000);
+</script>
+
+</div>
+<script>
+  (function() {
+    const correct = "modsquad";
+    const entered = prompt("🔒 Enter password to access the PPM Scorecard:");
+    if (entered === correct) {
+      document.getElementById("main-content").style.display = "block";
+    } else {
+      var d = document.getElementById("denied-screen");
+      d.style.display = "flex";
+    }
+  })();
 </script>
 </body>
 </html>
