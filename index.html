@@ -643,6 +643,15 @@ html, body { background: var(--bg); color: var(--ink); font-family: 'Archivo', s
 </style>
 </head>
 <body>
+<script>
+  (function() {
+    const correct = "modsquad";
+    const entered = prompt("🔒 Enter password to access the PPM Scorecard:");
+    if (entered !== correct) {
+      document.body.innerHTML = "<div style='display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0e1a;color:#f4f6fb;font-family:Arial,sans-serif;font-size:20px;'>Access denied.</div>";
+    }
+  })();
+</script>
 
 <!-- ================== FORM ================== -->
 <div class="form-wrap" id="formView" style="display:none;">
