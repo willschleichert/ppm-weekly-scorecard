@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PPM Weekly Scorecard v8</title>
+<title>PPM Weekly Scorecard v9</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&family=Barlow:wght@500;600;700&family=JetBrains+Mono:wght@400;600;800&family=Oswald:wght@700&family=Rajdhani:wght@700&family=Black+Ops+One&family=Teko:wght@700&family=Russo+One&display=swap" rel="stylesheet">
@@ -654,6 +654,7 @@ html, body { background: var(--bg); color: var(--ink); font-family: 'Archivo', s
 </style>
 </head>
 <body>
+
 <div id="denied-screen" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#0a0e1a;color:#f4f6fb;font-family:Arial,sans-serif;font-size:20px;align-items:center;justify-content:center;z-index:99999;">
   Access denied.
 </div>
@@ -673,11 +674,11 @@ html, body { background: var(--bg); color: var(--ink); font-family: 'Archivo', s
     <div class="form-grid">
       <div class="field">
         <label>Week Of</label>
-        <input type="text" id="weekLabel" value="May 11–17, 2026" placeholder="e.g. May 5–11, 2026">
+        <input type="text" id="weekLabel" value="May 18–24, 2026" placeholder="e.g. May 5–11, 2026">
       </div>
       <div class="field">
         <label>Prev Week Label</label>
-        <input type="text" id="prevLabel" value="May 4–10" placeholder="e.g. Apr 28 – May 4">
+        <input type="text" id="prevLabel" value="May 11–17" placeholder="e.g. Apr 28 – May 4">
       </div>
     </div>
     <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
@@ -690,18 +691,18 @@ html, body { background: var(--bg); color: var(--ink); font-family: 'Archivo', s
   <div class="form-card">
     <div class="form-section-title">Core KPIs · This Week vs Last</div>
     <div class="form-grid tight">
-      <div class="field"><label>PPM Conversion %</label><input type="number" id="kpi_conv" value="5.24" step="0.01"></div>
-      <div class="field"><label>Prev Conversion %</label><input type="number" id="kpi_conv_p" value="5.74" step="0.01"></div>
-      <div class="field"><label>Cards Built</label><input type="number" id="kpi_cards" value="121"></div>
+      <div class="field"><label>PPM Conversion %</label><input type="number" id="kpi_conv" value="4.8" step="0.01"></div>
+      <div class="field"><label>Prev Conversion %</label><input type="number" id="kpi_conv_p" value="5.24" step="0.01"></div>
+      <div class="field"><label>Cards Built</label><input type="number" id="kpi_cards" value="104"></div>
       <div class="field"><label>Prev Cards Built</label><input type="number" id="kpi_cards_p" value="121"></div>
-      <div class="field"><label>Total Bets</label><input type="number" id="kpi_bets" value="223874"></div>
-      <div class="field"><label>Prev Total Bets</label><input type="number" id="kpi_bets_p" value="307207"></div>
-      <div class="field"><label>Total Handle ($)</label><input type="number" id="kpi_handle" value="1781419"></div>
-      <div class="field"><label>Prev Handle ($)</label><input type="number" id="kpi_handle_p" value="2568737"></div>
-      <div class="field"><label>Avg $ per Bet</label><input type="number" id="kpi_apb" value="7.34" step="0.01"></div>
-      <div class="field"><label>Prev Avg $ per Bet</label><input type="number" id="kpi_apb_p" value="7.43" step="0.01"></div>
-      <div class="field"><label>GGR ($)</label><input type="number" id="kpi_pnl" value="1383419"></div>
-      <div class="field"><label>Prev GGR ($)</label><input type="number" id="kpi_pnl_p" value="2518080.8"></div>
+      <div class="field"><label>Total Bets</label><input type="number" id="kpi_bets" value="180428"></div>
+      <div class="field"><label>Prev Total Bets</label><input type="number" id="kpi_bets_p" value="223874"></div>
+      <div class="field"><label>Total Handle ($)</label><input type="number" id="kpi_handle" value="1421578.95"></div>
+      <div class="field"><label>Prev Handle ($)</label><input type="number" id="kpi_handle_p" value="1781419"></div>
+      <div class="field"><label>Avg $ per Bet</label><input type="number" id="kpi_apb" value="7.88" step="0.01"></div>
+      <div class="field"><label>Prev Avg $ per Bet</label><input type="number" id="kpi_apb_p" value="7.34" step="0.01"></div>
+      <div class="field"><label>GGR ($)</label><input type="number" id="kpi_pnl" value="1186813.57"></div>
+      <div class="field"><label>Prev GGR ($)</label><input type="number" id="kpi_pnl_p" value="1383419"></div>
     </div>
   </div>
 
@@ -773,19 +774,19 @@ Gerrit Cole 6+ Strikeouts</textarea>
           <label><input type="radio" name="betType_row1" class="bet-type-radio" value="Parlay"> Parlay</label>
         </div>
         <div class="winning-card-row-top">
-          <input type="text" placeholder="Matchup" value="OKC @ LAL">
-          <input type="text" placeholder="Odds" value="+734">
-          <input type="number" placeholder="Bets" value="3212" oninput="updatePayoutSum()">
-          <input type="number" placeholder="Payout $" value="204770.44" oninput="updatePayoutSum()">
+          <input type="text" placeholder="Matchup" value="LAD @ SD">
+          <input type="text" placeholder="Odds" value="+2507">
+          <input type="number" placeholder="Bets" value="879" oninput="updatePayoutSum()">
+          <input type="number" placeholder="Payout $" value="181242.06" oninput="updatePayoutSum()">
           <button class="btn-danger btn" onclick="this.closest('.winning-card-row').remove(); updatePayoutSum()">×</button>
         </div>
         <div class="winning-card-row-bottom">
-          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Back the NBA on Prime Thunder-Lakers Game 4 SGP</textarea></div>
-          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="NBA on Prime"></div>
-          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">LeBron James Over 22.5 Points
-Austin Reaves Over 21.5 Points
-Shai Gilgeous-Alexander 20+ Points
-Ajay Mitchell 20+ Points</textarea></div>
+          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Pick Ohtani &amp; top bats to shine as Dodgers-Padres battle for 1st in NL West</textarea></div>
+          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Ky Coony"></div>
+          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Shohei Ohtani 2+ Total Bases
+Fernando Tatis Jr. 2+ Total Bases
+Freddie Freeman 2+ Total Bases
+Manny Machado 2+ Total Bases</textarea></div>
         </div>
       </div>
       <div class="winning-card-row">
@@ -795,19 +796,19 @@ Ajay Mitchell 20+ Points</textarea></div>
           <label><input type="radio" name="betType_row2" class="bet-type-radio" value="Parlay"> Parlay</label>
         </div>
         <div class="winning-card-row-top">
-          <input type="text" placeholder="Matchup" value="BUF @ MTL">
-          <input type="text" placeholder="Odds" value="+761">
-          <input type="number" placeholder="Bets" value="228" oninput="updatePayoutSum()">
-          <input type="number" placeholder="Payout $" value="10742.05" oninput="updatePayoutSum()">
+          <input type="text" placeholder="Matchup" value="CWS @ SEA">
+          <input type="text" placeholder="Odds" value="+1134">
+          <input type="number" placeholder="Bets" value="202" oninput="updatePayoutSum()">
+          <input type="number" placeholder="Payout $" value="14127.37" oninput="updatePayoutSum()">
           <button class="btn-danger btn" onclick="this.closest('.winning-card-row').remove(); updatePayoutSum()">×</button>
         </div>
         <div class="winning-card-row-bottom">
-          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Saves and Snipers: Goalies stand tall, snipers find the net in this pivotal Game 4</textarea></div>
-          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Jeffrey Kafka Jr."></div>
-          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Ukko-Pekka Luukkonen 19+ Saves
-Jakub Dobes 19+ Saves
-Cole Caufield Any Time Goal Scorer
-Tage Thompson Any Time Goal Scorer</textarea></div>
+          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Drive Em In: Back these hitters to drive in the runs in this midday matchup</textarea></div>
+          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Jeff Kafka"></div>
+          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Julio Rodriguez 2+ Hits + Runs + RBIs
+Randy Arozarena 2+ Hits + Runs + RBIs
+Munetaka Murakami 2+ Hits + Runs + RBIs
+Miguel Vargas 2+ Hits + Runs + RBIs</textarea></div>
         </div>
       </div>
       <div class="winning-card-row">
@@ -817,19 +818,19 @@ Tage Thompson Any Time Goal Scorer</textarea></div>
           <label><input type="radio" name="betType_row3" class="bet-type-radio" value="Parlay"> Parlay</label>
         </div>
         <div class="winning-card-row-top">
-          <input type="text" placeholder="Matchup" value="DET @ NYM">
-          <input type="text" placeholder="Odds" value="+449">
-          <input type="number" placeholder="Bets" value="220" oninput="updatePayoutSum()">
-          <input type="number" placeholder="Payout $" value="8602.17" oninput="updatePayoutSum()">
+          <input type="text" placeholder="Matchup" value="ATL @ MIA">
+          <input type="text" placeholder="Odds" value="+2193">
+          <input type="number" placeholder="Bets" value="189" oninput="updatePayoutSum()">
+          <input type="number" placeholder="Payout $" value="23069.04" oninput="updatePayoutSum()">
           <button class="btn-danger btn" onclick="this.closest('.winning-card-row').remove(); updatePayoutSum()">×</button>
         </div>
         <div class="winning-card-row-bottom">
-          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">A.J. Ewing makes his MLB debut as the Mets look to start the homestand off with a W</textarea></div>
-          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Zack Leggett"></div>
-          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Juan Soto 2+ Total Bases
-Freddy Peralta 5+ Strikeouts
-AJ Ewing To Record A Hit
-New York Mets Moneyline</textarea></div>
+          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Batter's Box Bonanza: Predict these four hitters to record 3+ Hits + Runs + RBIs each</textarea></div>
+          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Zara Broomby"></div>
+          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Drake Baldwin 3+ Hits + Runs + RBIs
+Ronald Acuna Jr. 3+ Hits + Runs + RBIs
+Otto Lopez 3+ Hits + Runs + RBIs
+Xavier Edwards 3+ Hits + Runs + RBIs</textarea></div>
         </div>
       </div>
       <div class="winning-card-row">
@@ -839,19 +840,19 @@ New York Mets Moneyline</textarea></div>
           <label><input type="radio" name="betType_row4" class="bet-type-radio" value="Parlay"> Parlay</label>
         </div>
         <div class="winning-card-row-top">
-          <input type="text" placeholder="Matchup" value="CIN @ CLE">
-          <input type="text" placeholder="Odds" value="+3612">
-          <input type="number" placeholder="Bets" value="807" oninput="updatePayoutSum()">
-          <input type="number" placeholder="Payout $" value="156740.57" oninput="updatePayoutSum()">
+          <input type="text" placeholder="Matchup" value="CWS @ SEA">
+          <input type="text" placeholder="Odds" value="+1025">
+          <input type="number" placeholder="Bets" value="180" oninput="updatePayoutSum()">
+          <input type="number" placeholder="Payout $" value="9318.89" oninput="updatePayoutSum()">
           <button class="btn-danger btn" onclick="this.closest('.winning-card-row').remove(); updatePayoutSum()">×</button>
         </div>
         <div class="winning-card-row-bottom">
-          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Buckeye State Showdown: Sluggers shine in the opening game of this interleague rivalry</textarea></div>
-          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Eric Milam"></div>
-          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">JJ Bleday To Record An RBI
-Angel Martinez To Record An RBI
-Elly De La Cruz To Record 2+ Total Bases
-Travis Bazzana To Record 2+ Total Bases</textarea></div>
+          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Hits, Runs and RBIs oh my: Pick these 4 players to have 2+ Hits+Runs+RBIs each</textarea></div>
+          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Ryan Hardgrove"></div>
+          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Julio Rodriguez 2+ Hits + Runs + RBIs
+Randy Arozarena 2+ Hits + Runs + RBIs
+Munetaka Murakami 2+ Hits + Runs + RBIs
+Sam Antonacci 2+ Hits + Runs + RBIs</textarea></div>
         </div>
       </div>
       <div class="winning-card-row">
@@ -861,19 +862,19 @@ Travis Bazzana To Record 2+ Total Bases</textarea></div>
           <label><input type="radio" name="betType_row5" class="bet-type-radio" value="Parlay"> Parlay</label>
         </div>
         <div class="winning-card-row-top">
-          <input type="text" placeholder="Matchup" value="SD @ SEA">
-          <input type="text" placeholder="Odds" value="+490">
-          <input type="number" placeholder="Bets" value="545" oninput="updatePayoutSum()">
-          <input type="number" placeholder="Payout $" value="17144.86" oninput="updatePayoutSum()">
+          <input type="text" placeholder="Matchup" value="TOR @ PHX">
+          <input type="text" placeholder="Odds" value="+1660">
+          <input type="number" placeholder="Bets" value="41" oninput="updatePayoutSum()">
+          <input type="number" placeholder="Payout $" value="7008.02" oninput="updatePayoutSum()">
           <button class="btn-danger btn" onclick="this.closest('.winning-card-row').remove(); updatePayoutSum()">×</button>
         </div>
         <div class="winning-card-row-bottom">
-          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Back the Ben Verlander x Pitching Ninja Sunday Night Baseball SGP!</textarea></div>
-          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Ben Verlander x Pitching Ninja"></div>
-          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Fernando Tatis Jr. To Record A Hit
-Over 7.5 Total Runs
-Lucas Giolito Under 4.5 Strikeouts
-George Kirby 5+ Strikeouts</textarea></div>
+          <div class="field"><label>Narrative</label><textarea placeholder="Text after matchup (runs inline)">Bet Sykes to ride her career-high scoring momentum into a Tempo win tonight</textarea></div>
+          <div class="field"><label>Builder</label><input type="text" placeholder="Builder name" value="Ky Coony"></div>
+          <div class="field"><label>Legs (one per line)</label><textarea placeholder="Each leg on its own line">Toronto Tempo Moneyline
+Brittney Sykes 25+ Points
+Brittney Sykes 2+ Made Threes
+Brittney Sykes 4+ Assists</textarea></div>
         </div>
       </div>
     </div>
@@ -903,17 +904,19 @@ George Kirby 5+ Strikeouts</textarea></div>
     <div class="notes-week-block" id="notesBlock_1" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--line);">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
         <div style="background:var(--accent); color:#08160c; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:800; letter-spacing:0.12em; padding:3px 10px; border-radius:20px; white-space:nowrap;">WEEK 1 · CURRENT</div>
-        <input type="text" id="notesPillLabel_1" value="May 20" placeholder="e.g. 5/18 – 5/24"
+        <input type="text" id="notesPillLabel_1" value="May 27" placeholder="e.g. 5/18 – 5/24"
           style="background:var(--bg-2); border:1px solid var(--line); color:var(--ink); padding:7px 12px; border-radius:8px; font-family:'Archivo',sans-serif; font-size:13px; font-weight:600; width:160px;">
         <button class="notes-pill-toggle" id="notesToggle_1" onclick="toggleNotesPillHidden(1)" title="Hide/show this week\'s pill in the app">👁 Visible</button>
       </div>
       <div class="field">
         <label>Notes (bullet points)</label>
-        <textarea id="weeklyNotes_1" style="min-height:120px;" placeholder="• Key insight or callout&#10;• Another note">• Currently tracking to get 3-leg capability at the end of the month.  Chad/Will/Eric are meeting with Product + Tech tomorrow to get more details.
-• Drew has reached out to Anika from product side to sync on Parlay Hub Show/No Show for Canada, hope to get that started soon.
-• NHL homepage tab is now a custom tab, so NHL cards will be mostly on event pages now.  Make sure to check the event page to see if anything you can snipe first, as we can't control the order of cards in the EP.
-• Quick demo: how to create URL links for push notification cards (guide also pinned in franchise channel)
-• Asana Reminder: Double check that you've filled in all relevant fields before you complete a task.  Most common areas left incomplete: Due Date, # of Legs, Narrative (put it in quotation marks below the legs in the description box)</textarea>
+        <textarea id="weeklyNotes_1" style="min-height:120px;" placeholder="• Key insight or callout&#10;• Another note">• WoW dips driven by no MMA (50k bets &amp; ~$530k handle combined L2 weeks), and MLB decline (only 5 fewer cards, but -25.5k bets &amp; -$192k handle WoW), where Rivalry Weekend (5/15-5/17) provided a boost to the prior week's numbers.  Others sports relatively flat, with NBA numbers up slightly.
+• SGP+: The two outstanding bugs have been fixed and will be ready for the app release on June 8th.  Barring any setbacks, we should be able to start offering SGP+ in the module in two weeks.
+• Parlay/SGP/+ Simultaneously: Confirmed no load concerns here; Tested last week, ran into same issue that we saw during initial SGP+ tests (module not appearing on homepage custom tabs).  Engineers investigating, we should know more by EOW.
+• Legs &amp; Odds Restrictions: Performance tests still ongoing; 3-Legs appears close, while 2-Legs still TBD.  Separate testing needed for reduction in odds, so will be waiting a bit longer on that.  Should have more updates on leg reduction soon.
+• Abbreviating Market Descriptions in Card Legs: Will be looked at during the sprint that begins on June 15th.
+• URL Links for Push Notifications: New tool pinned in slack channel, just plug in IDs and it will generate a link that you can share.
+• Grading Cards: How to do it and when to do it.</textarea>
       </div>
     </div>
 
@@ -921,31 +924,35 @@ George Kirby 5+ Strikeouts</textarea></div>
     <div class="notes-week-block" id="notesBlock_2" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--line);">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
         <div style="background:var(--panel-2); color:var(--ink-2); font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:800; letter-spacing:0.12em; padding:3px 10px; border-radius:20px; white-space:nowrap;">WEEK 2</div>
-        <input type="text" id="notesPillLabel_2" value="May 13" placeholder="e.g. 5/11 – 5/17"
+        <input type="text" id="notesPillLabel_2" value="May 20" placeholder="e.g. 5/11 – 5/17"
           style="background:var(--bg-2); border:1px solid var(--line); color:var(--ink); padding:7px 12px; border-radius:8px; font-family:'Archivo',sans-serif; font-size:13px; font-weight:600; width:160px;">
         <button class="notes-pill-toggle" id="notesToggle_2" onclick="toggleNotesPillHidden(2)" title="Hide/show this week\'s pill in the app">👁 Visible</button>
       </div>
       <div class="field">
         <label>Notes (bullet points)</label>
-        <textarea id="weeklyNotes_2" style="min-height:120px;" placeholder="• Key insight or callout&#10;• Another note">• SGP+: 7-leg bug will be looked at during next engineering sprint (starting May 21), once fixed we can start offering SGP+
-• New PM (Raquel Ferreira) handling Parlay Hub decommission and easing of legs/odds restrictions.  She will sync w/tech to determine if we can remove Parlay Hub from US but keep in Canada, and a timeline for any load testing needed for legs/odds.
-• Trading request to use the NHL goalie X+ saves markets, newly SGPable.  Use the 19+ index or lower, current issue with 20+ and up markets so want to avoid those in module.
-• PGA Championship starts tomorrow, will swap to parlays overnight
-• WNBA on Prime &amp; MLB on FOX partnerships (Thu/Sat this week).  MLB on FOX is similar to YES/NESN/MLB Network, so need to keep these at exactly 4 legs and the odds under +1000</textarea>
+        <textarea id="weeklyNotes_2" style="min-height:120px;" placeholder="• Key insight or callout&#10;• Another note">• Currently tracking to get 3-leg capability at the end of the month.  Chad/Will/Eric are meeting with Product + Tech tomorrow to get more details.
+• Drew has reached out to Anika from product side to sync on Parlay Hub Show/No Show for Canada, hope to get that started soon.
+• NHL homepage tab is now a custom tab, so NHL cards will be mostly on event pages now.  Make sure to check the event page to see if anything you can snipe first, as we can't control the order of cards in the EP.
+• Quick demo: how to create URL links for push notification cards (guide also pinned in franchise channel)
+• Asana Reminder: Double check that you've filled in all relevant fields before you complete a task.  Most common areas left incomplete: Due Date, # of Legs, Narrative (put it in quotation marks below the legs in the description box)</textarea>
       </div>
     </div>
 
     <!-- Weeks 3–5: hidden until added -->
-    <div class="notes-week-block" id="notesBlock_3" style="display:none; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--line);">
+    <div class="notes-week-block" id="notesBlock_3" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--line);">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
         <div style="background:var(--panel-2); color:var(--ink-2); font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:800; letter-spacing:0.12em; padding:3px 10px; border-radius:20px; white-space:nowrap;">WEEK 3</div>
-        <input type="text" id="notesPillLabel_3" value="" placeholder="e.g. 5/4 – 5/10"
+        <input type="text" id="notesPillLabel_3" value="May 13" placeholder="e.g. 5/4 – 5/10"
           style="background:var(--bg-2); border:1px solid var(--line); color:var(--ink); padding:7px 12px; border-radius:8px; font-family:'Archivo',sans-serif; font-size:13px; font-weight:600; width:160px;">
         <button class="notes-pill-toggle" id="notesToggle_3" onclick="toggleNotesPillHidden(3)" title="Hide/show this week\'s pill in the app">👁 Visible</button>
       </div>
       <div class="field">
         <label>Notes (bullet points)</label>
-        <textarea id="weeklyNotes_3" style="min-height:120px;" placeholder="• Key insight or callout&#10;• Another note"></textarea>
+        <textarea id="weeklyNotes_3" style="min-height:120px;" placeholder="• Key insight or callout&#10;• Another note">• SGP+: 7-leg bug will be looked at during next engineering sprint (starting May 21), once fixed we can start offering SGP+
+• New PM (Raquel Ferreira) handling Parlay Hub decommission and easing of legs/odds restrictions.  She will sync w/tech to determine if we can remove Parlay Hub from US but keep in Canada, and a timeline for any load testing needed for legs/odds.
+• Trading request to use the NHL goalie X+ saves markets, newly SGPable.  Use the 19+ index or lower, current issue with 20+ and up markets so want to avoid those in module.
+• PGA Championship starts tomorrow, will swap to parlays overnight
+• WNBA on Prime &amp; MLB on FOX partnerships (Thu/Sat this week).  MLB on FOX is similar to YES/NESN/MLB Network, so need to keep these at exactly 4 legs and the odds under +1000</textarea>
       </div>
     </div>
     <div class="notes-week-block" id="notesBlock_4" style="display:none; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--line);">
@@ -963,7 +970,7 @@ George Kirby 5+ Strikeouts</textarea></div>
     <div class="notes-week-block" id="notesBlock_5" style="display:none; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--line);">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
         <div style="background:var(--panel-2); color:var(--ink-2); font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:800; letter-spacing:0.12em; padding:3px 10px; border-radius:20px; white-space:nowrap;">WEEK 5</div>
-        <input type="text" id="notesPillLabel_5" value="" placeholder="e.g. 4/20 – 4/26"
+        <input type="text" id="notesPillLabel_5" value="Jun 29 – Jul 5, 2026" placeholder="e.g. 4/20 – 4/26"
           style="background:var(--bg-2); border:1px solid var(--line); color:var(--ink); padding:7px 12px; border-radius:8px; font-family:'Archivo',sans-serif; font-size:13px; font-weight:600; width:160px;">
         <button class="notes-pill-toggle" id="notesToggle_5" onclick="toggleNotesPillHidden(5)" title="Hide/show this week\'s pill in the app">👁 Visible</button>
       </div>
@@ -975,7 +982,7 @@ George Kirby 5+ Strikeouts</textarea></div>
 
     <div class="btn-row" style="margin-top:4px;">
       <button class="btn btn-secondary" id="addNotesWeekBtn" onclick="addNotesWeek()" style="font-size:12px;">+ Add Previous Week</button>
-      <span id="notesWeekCount" style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-3); margin-left:auto; align-self:center;">2 / 5 weeks visible</span>
+      <span id="notesWeekCount" style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-3); margin-left:auto; align-self:center;">3 / 5 weeks visible</span>
     </div>
   </div>
 
@@ -998,7 +1005,7 @@ George Kirby 5+ Strikeouts</textarea></div>
 </div>
 
 <!-- ================== SCORECARD (FD App Style) ================== -->
-<div id="scorecardView" style="display:block;">
+<div id="scorecardView" style="display:none;">
 
   <div class="fd-shell">
 
@@ -1293,33 +1300,110 @@ const TEAM = [
 
 // ============== BUILD TEAM HISTORY FORM ==============
 const TEAM_MEMBER_DEFAULTS = {
-  "brandon_lowe": {
-    "ytd_cards": "0",
-    "ytd_wins": "0",
-    "ytd_bets": "0",
-    "ytd_handle": "0",
-    "ytd_money": "0",
-    "weekly_cards": "0,0,0,0,0",
-    "weekly_wins": "0,0,0,0,0",
-    "weekly_bets": "0/0/0/0/0",
-    "weekly_handle": "0/0/0/0/0"
+  "eric_milam": {
+    "ytd_cards": "184",
+    "ytd_wins": "4",
+    "ytd_bets": "518397",
+    "ytd_handle": "4084754",
+    "ytd_money": "1087152",
+    "weekly_cards": "18,16,15,16,9",
+    "weekly_wins": "1,1,0,1,0",
+    "weekly_bets": "53,682/50,984/66,887/49,359/37,825",
+    "weekly_handle": "436,312/399,218/520,561/369,869/297,029"
+  },
+  "ky_coony": {
+    "ytd_cards": "208",
+    "ytd_wins": "10",
+    "ytd_bets": "523802",
+    "ytd_handle": "4187121",
+    "ytd_money": "2966809",
+    "weekly_cards": "15,17,12,10,15",
+    "weekly_wins": "1,2,0,0,2",
+    "weekly_bets": "42,814/91,005/66,935/12,538/19,113",
+    "weekly_handle": "377,598/738,778/508,846/97,039/142,415"
+  },
+  "matt_campion": {
+    "ytd_cards": "167",
+    "ytd_wins": "8",
+    "ytd_bets": "236855",
+    "ytd_handle": "1927705",
+    "ytd_money": "1338037",
+    "weekly_cards": "12,9,13,9,10",
+    "weekly_wins": "3,0,0,0,0",
+    "weekly_bets": "40,273/8,663/26,303/8,841/15,531",
+    "weekly_handle": "346,147/68,023/212,438/59,400/114,498"
+  },
+  "zara_broomby": {
+    "ytd_cards": "189",
+    "ytd_wins": "6",
+    "ytd_bets": "497621",
+    "ytd_handle": "3816180",
+    "ytd_money": "1625367",
+    "weekly_cards": "0,17,15,13,9",
+    "weekly_wins": "0,1,0,0,1",
+    "weekly_bets": "0/21,897/17,568/21,950/16,918",
+    "weekly_handle": "0/160,130/128,865/150,521/139,261"
+  },
+  "jeffrey_kafka": {
+    "ytd_cards": "108",
+    "ytd_wins": "9",
+    "ytd_bets": "82671",
+    "ytd_handle": "685552",
+    "ytd_money": "156409",
+    "weekly_cards": "7,10,15,7,10",
+    "weekly_wins": "0,4,1,1,1",
+    "weekly_bets": "3,307/4,231/6,642/2,303/3,800",
+    "weekly_handle": "24,079/34,077/47,449/16,561/26,574"
+  },
+  "zack_leggett": {
+    "ytd_cards": "136",
+    "ytd_wins": "11",
+    "ytd_bets": "104777",
+    "ytd_handle": "890897",
+    "ytd_money": "826263",
+    "weekly_cards": "9,0,7,14,6",
+    "weekly_wins": "1,0,1,1,0",
+    "weekly_bets": "10,468/0/1,170/5,850/2,798",
+    "weekly_handle": "86,668/0/7,449/37,729/20,436"
+  },
+  "ryan_hardgrove": {
+    "ytd_cards": "171",
+    "ytd_wins": "6",
+    "ytd_bets": "241093",
+    "ytd_handle": "1840297",
+    "ytd_money": "432626",
+    "weekly_cards": "11,12,10,9,12",
+    "weekly_wins": "0,1,0,0,1",
+    "weekly_bets": "7,157/10,362/6,675/3,831/6,521",
+    "weekly_handle": "58,043/92,696/54,802/26,324/41,861"
   },
   "chad_rowley": {
-    "ytd_cards": "158",
+    "ytd_cards": "156",
     "ytd_wins": "9",
     "ytd_bets": "618808",
     "ytd_handle": "5408870",
     "ytd_money": "3194657",
-    "weekly_cards": "2,0,0,4,9",
+    "weekly_cards": "0,0,4,9,0",
     "weekly_wins": "0,0,0,0,0",
-    "weekly_bets": "1,848/0/0/33,132/17,502",
-    "weekly_handle": "13,623/0/0/362,647/171,812"
+    "weekly_bets": "0/0/33,132/17,502/0",
+    "weekly_handle": "0/0/362,647/171,812/0"
+  },
+  "will_schleichert": {
+    "ytd_cards": "588",
+    "ytd_wins": "22",
+    "ytd_bets": "3069240",
+    "ytd_handle": "24287965",
+    "ytd_money": "13166540",
+    "weekly_cards": "33,19,17,18,22",
+    "weekly_wins": "2,0,0,0,0",
+    "weekly_bets": "79,713/70,655/49,507/65,234/59,168",
+    "weekly_handle": "577,520/548,281/367,974/492,795/456,882"
   },
   "corey_southern": {
     "ytd_cards": "25",
     "ytd_wins": "1",
     "ytd_bets": "10093",
-    "ytd_handle": "100535",
+    "ytd_handle": "100536",
     "ytd_money": "49219",
     "weekly_cards": "0,0,0,0,0",
     "weekly_wins": "0,0,0,0,0",
@@ -1332,98 +1416,21 @@ const TEAM_MEMBER_DEFAULTS = {
     "ytd_bets": "48658",
     "ytd_handle": "359318",
     "ytd_money": "0",
-    "weekly_cards": "2,0,0,0,0",
+    "weekly_cards": "0,0,0,0,0",
     "weekly_wins": "0,0,0,0,0",
-    "weekly_bets": "15,124/0/0/0/0",
-    "weekly_handle": "110,145/0/0/0/0"
+    "weekly_bets": "0/0/0/0/0",
+    "weekly_handle": "0/0/0/0/0"
   },
-  "eric_milam": {
-    "ytd_cards": "181",
-    "ytd_wins": "3",
-    "ytd_bets": "480572",
-    "ytd_handle": "3787725",
-    "ytd_money": "1087152",
-    "weekly_cards": "3,18,16,15,16",
-    "weekly_wins": "0,1,1,0,1",
-    "weekly_bets": "919/53,682/50,984/66,887/49,359",
-    "weekly_handle": "7,058/436,312/399,218/520,561/369,869"
-  },
-  "jeffrey_kafka": {
-    "ytd_cards": "102",
-    "ytd_wins": "7",
-    "ytd_bets": "79989",
-    "ytd_handle": "665317",
-    "ytd_money": "142281",
-    "weekly_cards": "4,7,10,15,7",
-    "weekly_wins": "0,0,4,1,1",
-    "weekly_bets": "3,896/3,307/4,231/6,642/2,303",
-    "weekly_handle": "32,970/24,079/34,077/47,449/16,561"
-  },
-  "ky_coony": {
-    "ytd_cards": "199",
-    "ytd_wins": "8",
-    "ytd_bets": "505181",
-    "ytd_handle": "4047320",
-    "ytd_money": "2778559",
-    "weekly_cards": "10,15,17,12,10",
-    "weekly_wins": "1,1,2,0,0",
-    "weekly_bets": "20,283/42,814/91,005/66,935/12,538",
-    "weekly_handle": "159,301/377,598/738,778/508,846/97,039"
-  },
-  "matt_campion": {
-    "ytd_cards": "161",
-    "ytd_wins": "8",
-    "ytd_bets": "221756",
-    "ytd_handle": "1815590",
-    "ytd_money": "1338037",
-    "weekly_cards": "7,12,9,13,9",
-    "weekly_wins": "0,3,0,0,0",
-    "weekly_bets": "17,751/40,273/8,663/26,303/8,841",
-    "weekly_handle": "139,636/346,147/68,023/212,438/59,400"
-  },
-  "ryan_hardgrove": {
-    "ytd_cards": "162",
-    "ytd_wins": "5",
-    "ytd_bets": "234752",
-    "ytd_handle": "1799345",
-    "ytd_money": "432626",
-    "weekly_cards": "4,11,12,10,9",
-    "weekly_wins": "0,0,1,0,0",
-    "weekly_bets": "3,510/7,157/10,362/6,675/3,831",
-    "weekly_handle": "33,689/58,043/92,696/54,802/26,324"
-  },
-  "will_schleichert": {
-    "ytd_cards": "574",
-    "ytd_wins": "22",
-    "ytd_bets": "3034062",
-    "ytd_handle": "24008982",
-    "ytd_money": "13166540",
-    "weekly_cards": "32,33,19,17,18",
-    "weekly_wins": "2,2,0,0,0",
-    "weekly_bets": "156,123/79,713/70,655/49,507/65,234",
-    "weekly_handle": "1,196,884/577,520/548,281/367,974/492,795"
-  },
-  "zack_leggett": {
-    "ytd_cards": "134",
-    "ytd_wins": "10",
-    "ytd_bets": "103228",
-    "ytd_handle": "880652",
-    "ytd_money": "826262",
-    "weekly_cards": "4,9,0,7,14",
-    "weekly_wins": "0,1,0,1,1",
-    "weekly_bets": "3,880/10,468/0/1,170/5,850",
-    "weekly_handle": "27,362/86,668/0/7,449/37,729"
-  },
-  "zara_broomby": {
-    "ytd_cards": "185",
-    "ytd_wins": "5",
-    "ytd_bets": "481863",
-    "ytd_handle": "3684451",
-    "ytd_money": "1602297",
-    "weekly_cards": "0,0,17,15,13",
-    "weekly_wins": "0,0,1,0,0",
-    "weekly_bets": "0/0/21,897/17,568/21,950",
-    "weekly_handle": "0/0/160,130/128,865/150,521"
+  "brandon_lowe": {
+    "ytd_cards": "0",
+    "ytd_wins": "0",
+    "ytd_bets": "0",
+    "ytd_handle": "0",
+    "ytd_money": "0",
+    "weekly_cards": "0,0,0,0,0",
+    "weekly_wins": "0,0,0,0,0",
+    "weekly_bets": "0/0/0/0/0",
+    "weekly_handle": "0/0/0/0/0"
   }
 };
 
@@ -1680,7 +1687,7 @@ function switchNotesPill(wk, el) {
 }
 
 // Track how many notes weeks are currently visible
-let _notesWeeksVisible = 2;
+let _notesWeeksVisible = 3;
 // Track which weeks have their pill hidden in the app (Set of week numbers 1-5)
 let _notesHidden = new Set();
 
@@ -1720,15 +1727,13 @@ function addNotesWeek() {
 let DRAWER_SPORTS = [];
 let sportDrawerCounter = 0;
 
-// Default seed data — last updated v8 (2026-05-11–17)
+// Default seed data — last updated v9 (2026-05-18–24)
 const SPORT_DEFAULTS = [
-  { label: 'MLB',    cards: 58, bets: 58132,  handle: 413350.85,  apb: 6.87 },
-  { label: 'NBA',    cards: 30, bets: 138014, handle: 1122418.73, apb: 8.01 },
-  { label: 'MMA',    cards: 9,  bets: 17502,  handle: 171812.71,  apb: 9.05 },
-  { label: 'WNBA',   cards: 9,  bets: 4363,   handle: 30642.62,   apb: 6.60 },
-  { label: 'NHL',    cards: 8,  bets: 3635,   handle: 25539.68,   apb: 7.09 },
-  { label: 'SOCCER', cards: 4,  bets: 281,    handle: 2072.91,    apb: 7.70 },
-  { label: 'GOLF',   cards: 3,  bets: 1947,   handle: 15581.75,   apb: 8.00 },
+  { label: 'NBA', cards: 30, bets: 140833, handle: 1153036.12, apb: 8.19 },
+  { label: 'MLB', cards: 53, bets: 32638, handle: 221318.74, apb: 6.78 },
+  { label: 'NHL', cards: 6, bets: 3715, handle: 27106.42, apb: 7.30 },
+  { label: 'WNBA', cards: 12, bets: 3014, handle: 18666.04, apb: 6.19 },
+  { label: 'SOCCER', cards: 3, bets: 228, handle: 1451.63, apb: 6.37 },
 ];
 
 function buildSportStatsList() {
@@ -2574,7 +2579,7 @@ function lsLoad() {
     });
     // Restore visible notes week blocks
     if (saved['_notesWeeksVisible']) {
-      const n = parseInt(saved['_notesWeeksVisible']) || 2;
+      const n = parseInt(saved['_notesWeeksVisible']) || 3;
       _notesWeeksVisible = Math.max(2, Math.min(5, n));
       for (let i = 3; i <= _notesWeeksVisible; i++) {
         const block = $('notesBlock_' + i);
@@ -2621,8 +2626,8 @@ updateUndoBtn();
 // Attach auto-save listeners after form is built
 attachLsListeners();
 
-// Auto-render scorecard on load (GitHub read-only mode)
-try { generateScorecard(); } catch(e) {}
+// Auto-generate scorecard on load (GitHub read-only view)
+generateScorecard();
 
 // Auto-snapshot every 60 seconds while editing
 setInterval(() => {
